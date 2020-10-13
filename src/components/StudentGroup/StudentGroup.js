@@ -12,7 +12,7 @@ class StudentGroup extends React.Component {
           <input className="separate-button" type="button" value="分组学员" />
         </header>
         {nameList.map((groupName) => (
-          <GroupDetail groupName={groupName} />
+          <GroupDetail key={groupName} groupName={groupName} />
         ))}
       </div>
     );
