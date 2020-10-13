@@ -1,0 +1,14 @@
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.student-list li {
+  text-align: center;
+  padding: 10px 30px;
+  margin: 10px;
+  background-color: #eee;
+}
