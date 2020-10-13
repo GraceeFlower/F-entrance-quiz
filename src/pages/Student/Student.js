@@ -43,7 +43,7 @@ class Student extends React.Component {
 
     return (
       <div className="student-page">
-        <StudentGroup students={students} />
+        <StudentGroup />
         <StudentList students={students} />
       </div>
     );

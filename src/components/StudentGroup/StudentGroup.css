@@ -1,8 +1,11 @@
+.student-group {
+  margin-bottom: 20px;
+}
+
 .group-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .group-header input[type='button'] {
