@@ -28,10 +28,10 @@ describe('<Student />', () => {
     expect(wrapper.find(StudentList).exists()).toBe(true);
   });
 
-  // it('fetch students after mount', () => {
-  //   const wrapper = shallow(<Student />);
-  //   wrapper.update();
-  //
-  //   expect(fetch).toHaveBeenCalledTimes(1);
-  // });
+  it('fetch students after mount', () => {
+    const wrapper = shallow(<Student />);
+    wrapper.update();
+
+    expect(fetch).toHaveBeenCalledTimes(1);
+  });
 });

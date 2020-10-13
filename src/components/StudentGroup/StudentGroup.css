@@ -1,0 +1,13 @@
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.group-header input[type='button'] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e85559;
+  color: #fff;
+}

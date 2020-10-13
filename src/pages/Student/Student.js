@@ -1,6 +1,7 @@
 import React from 'react';
 import StudentList from '../../components/StudentList/StudentList';
 import './Student.css';
+import StudentGroup from '../../components/StudentGroup/StudentGroup';
 
 class Student extends React.Component {
   constructor(props) {
@@ -23,18 +24,18 @@ class Student extends React.Component {
   }
 
   componentDidMount() {
-    // fetch('http://localhost:8080/students', { mode: 'no-cors'})
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //       let students = data.results;
-    //       this.setState({students});
-    //     },
-    //     (error) => {
-    //       this.setState({
-    //         error
-    //       });
-    //     }
-    //   );
+    fetch('http://localhost:8080/students', { mode: 'no-cors' })
+      .then((res) => res.json())
+      .then(
+        (data) => {
+          this.setState({ students: data });
+        }
+        //   (error) => {
+        //     this.setState({
+        //       error
+        //     });
+        //   }
+      );
   }
 
   render() {
@@ -42,6 +43,7 @@ class Student extends React.Component {
 
     return (
       <div className="student-page">
+        <StudentGroup students={students} />
         <StudentList students={students} />
       </div>
     );
