@@ -2,6 +2,7 @@ import React from 'react';
 import StudentList from '../../components/StudentList/StudentList';
 import './Student.css';
 import StudentGroup from '../../components/StudentGroup/StudentGroup';
+// import axios from 'axios';
 
 class Student extends React.Component {
   constructor(props) {
@@ -24,18 +25,30 @@ class Student extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8080/students', { mode: 'no-cors' })
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          this.setState({ students: data });
-        }
-        //   (error) => {
-        //     this.setState({
-        //       error
-        //     });
-        //   }
-      );
+    // fetch('http://localhost:8080/students', { mode: 'no-cors' })
+    //   .then((res) => res.json())
+    //   .then(
+    //     (data) => {
+    //       this.setState({ students: data });
+    //     }
+    //     //   (error) => {
+    //     //     this.setState({
+    //     //       error
+    //     //     });
+    //     //   }
+    //   );
+    // axios('http://localhost:8080/students', {
+    //   method: 'GET',
+    //   mode: 'no-cors',
+    //   headers: {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   withCredentials: true,
+    //   credentials: 'same-origin',
+    // }).then(response => {
+    //   this.setState({students: response})
+    // })
   }
 
   render() {
