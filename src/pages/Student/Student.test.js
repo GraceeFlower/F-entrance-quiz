@@ -25,6 +25,7 @@ describe('<Student />', () => {
 
   it('display student list', () => {
     const wrapper = shallow(<Student />);
+    // TODO 还可以测试StudentList收到的props含有你请求后传递给他的data
     expect(wrapper.find(StudentList).exists()).toBe(true);
   });
 
@@ -32,6 +33,7 @@ describe('<Student />', () => {
     const wrapper = shallow(<Student />);
     wrapper.update();
 
+    // TODO 你使用的axios，应该mock axios测试calledTimes而不是测和mockfetch
     expect(fetch).toHaveBeenCalledTimes(1);
   });
 });

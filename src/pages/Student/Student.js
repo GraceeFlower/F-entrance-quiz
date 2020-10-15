@@ -10,11 +10,13 @@ class Student extends React.Component {
     super(props);
     this.state = {
       // error: null,
+      // TODO students默认值可以是[]
       students: null,
     };
   }
 
   async componentDidMount() {
+    // TODO api请求可以单独抽出构建api层，但现在只有一个api请求也还好
     const students = await axios.get('http://localhost:8080/students');
     this.setState({ students: students.data });
   }

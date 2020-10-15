@@ -7,11 +7,13 @@ class StudentList extends React.Component {
       <div>
         <h1>学员列表</h1>
         <ul className="student-list">
-          {this.props.students.map((student) => (
-            <li key={student.id}>
-              {student.id}. {student.name}
-            </li>
-          ))}
+          {/* TODO 注意判断students是否为null，为null时会报错导致页面出不来，修改如下 */}
+          {this.props.students &&
+            this.props.students.map((student) => (
+              <li key={student.id}>
+                {student.id}. {student.name}
+              </li>
+            ))}
         </ul>
       </div>
     );
